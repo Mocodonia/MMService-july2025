@@ -15,13 +15,13 @@ const MocodoniaTileLayer = L.TileLayer.extend({
     getTileUrl: function(coords) {
         // Final URL: Correctly uses negative x/y from the Simple CRS
         const cacheBuster = Date.now();
-        return `/MMService/tiles/${coords.x},${coords.y}.png?v=${cacheBuster}`;
+        return `/MMService-july2025/tiles/${coords.x},${coords.y}.png?v=${cacheBuster}`;
     }
 });
 
 // 3. Tile Layer Initialization (Lock the zoom and use the custom class)
 new MocodoniaTileLayer({
-    attribution: 'MMService • Mocodonia',
+    attribution: 'MMService July 2025 Archive • Mocodonia',
     tileSize: 256,
     
     // Lock the map to zoom level 2 (the scale of your images)
